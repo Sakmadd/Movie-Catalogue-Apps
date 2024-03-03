@@ -1,7 +1,7 @@
-import CONFIG from "../../globals/config"
+import CONFIG from '../../globals/config'
 
 const createMovieDetailTemplate = (movie) => {
-    return`
+  return `
     <h2 class="movie__title">${movie.title}</h2>
   <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + movie.poster_path}" alt="${movie.title}" />
   <div class="movie__info">
@@ -19,10 +19,10 @@ const createMovieDetailTemplate = (movie) => {
     <h3>Overview</h3>
     <p>${movie.overview}</p>
   </div>
-`}
+` }
 
 const createMovieItemTemplate = (movie) => {
-    return`
+  return `
     <div class="movie-item">
     <div class="movie-item__header">
       <img class="movie-item__header__poster" alt="${movie.title}"
@@ -36,6 +36,6 @@ const createMovieItemTemplate = (movie) => {
       <p>${movie.overview}</p>
     </div>
   </div>
-`}
+` }
 
-export {createMovieDetailTemplate, createMovieItemTemplate}
+export { createMovieDetailTemplate, createMovieItemTemplate }

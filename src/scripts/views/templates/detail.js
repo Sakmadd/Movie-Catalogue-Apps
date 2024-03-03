@@ -1,6 +1,6 @@
 import TheMovieDbSource from '../../data/themoviedb-source.js'
-import UrlParser from '../../routes/url-parser.js';
-import { createMovieDetailTemplate } from './template-creator.js';
+import UrlParser from '../../routes/url-parser.js'
+import { createMovieDetailTemplate } from './template-creator.js'
 
 const Detail = {
   async render () {
@@ -10,8 +10,8 @@ const Detail = {
   },
 
   async afterRender () {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const movie = await TheMovieDbSource.detailMovie(url.id);
+    const url = UrlParser.parseActiveUrlWithoutCombiner()
+    const movie = await TheMovieDbSource.detailMovie(url.id)
     const movieContainer = document.querySelector('#movie')
     movieContainer.innerHTML += createMovieDetailTemplate(movie)
   }

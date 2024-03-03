@@ -17,7 +17,7 @@ const NowPlaying = {
     const movieContainer = document.querySelector('#movies')
     movies.forEach(movie => {
       movieContainer.innerHTML += createMovieItemTemplate(movie)
-    });
+    })
   }
 }
 
