@@ -1,29 +1,29 @@
 const UrlParser = {
-    parseActiveUrlWithCombiner(){
-        const url = window.location.hash.slice(1).toLowerCase()
-        const splitedUrl = this._urlSpliter(url)
-        return this._urlCombiner(splitedUrl)
-    },
+  parseActiveUrlWithCombiner () {
+    const url = window.location.hash.slice(1).toLowerCase()
+    const splitedUrl = this._urlSpliter(url)
+    return this._urlCombiner(splitedUrl)
+  },
 
-    parseActiveUrlWithoutCombiner(){
-        const url = window.location.hash.slice(1).toLowerCase()
-        return this._urlSpliter(url)
-    },
+  parseActiveUrlWithoutCombiner () {
+    const url = window.location.hash.slice(1).toLowerCase()
+    return this._urlSpliter(url)
+  },
 
-    _urlSpliter(url){
-        const urlsSplits = url.split('/')
-        return {
-            resource: urlsSplits[1],
-            id: urlsSplits[2],
-            verb: urlsSplits[3]
-        }
-    },
-    
-    _urlCombiner(splitedUrl){
-        return(splitedUrl.resource ? `/${splitedUrl.resource}` : '/')
-        + (splitedUrl.id ? '/:id' : '')
-        + (splitedUrl.verb ? `/${splitedUrl.verb}` : '')
+  _urlSpliter (url) {
+    const urlsSplits = url.split('/')
+    return {
+      resource: urlsSplits[1],
+      id: urlsSplits[2],
+      verb: urlsSplits[3]
     }
+  },
+
+  _urlCombiner (splitedUrl) {
+    return (splitedUrl.resource ? `/${splitedUrl.resource}` : '/') +
+        (splitedUrl.id ? '/:id' : '') +
+        (splitedUrl.verb ? `/${splitedUrl.verb}` : '')
+  }
 }
 
 export default UrlParser
