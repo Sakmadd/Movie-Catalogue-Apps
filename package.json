@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start-dev": "webpack serve --config webpack.dev.js",
-      "build": "webpack --config webpack.prod.js",
-      "lint": "eslint ./src",
-      "lint-fix": "eslint --fix ./src"
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint ./src",
+    "lint-fix": "eslint --fix ./src",
+    "serve": "http-server dist --port 9000"
   },
   "keywords": [],
   "author": "",
@@ -24,13 +25,16 @@
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2",
-    "webpack-merge": "^5.10.0"
+    "webpack-merge": "^5.10.0",
+    "workbox-window": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "http-server": "^14.1.1",
+    "workbox-webpack-plugin": "^7.0.0"
   }
 }
